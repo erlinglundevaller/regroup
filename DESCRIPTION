@@ -1,0 +1,10 @@
+Package: Regroup
+Type: Package
+Title: Regroup
+Version: 1.2
+Date: 2015-06-25
+Author: Erling Haggstrom Lundevaller
+Maintainer: Erling Haggstrom Lundevaller <erling.lundevaller@gmail.com>
+Description: Regrouping individuals/items over time based on proportion transfered between regions/groups..
+Depends: data.table
+License: GPL-3
