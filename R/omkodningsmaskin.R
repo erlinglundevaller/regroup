@@ -25,10 +25,12 @@
 #'  @param  djup   for sloving nested knots, not implemented.
 #' @return lansdt A data.frame with columns: "New", "Old",  "Freq", "totold", "propold", "totnew", "propnew", "newcode"; a key table.
 #' @export
+#' @import data.table
 #' @author Erling Haggstrom Lundevaller
 #' @details regroups individuals/items over time based on region/group menbership
 omkodningsmaskin <- function(data, cutoff = 0.05, startar=NA, slutar=NA, djup=1){
-  require(data.table)
+  if(getRversion() >= "2.15.1")  utils::globalVariables(c("data.table"))
+#  require(data.table)
 setnames(data,  c("pid", "time", "region"))
 # data$time <- as.character(data$time)
 setkey(data,  pid, time)
